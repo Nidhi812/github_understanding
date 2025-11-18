@@ -1,53 +1,52 @@
 for configure git at global level 
--> git config --global user.name "Your name"
--> git config --global user.email "your.email@example.com"
+        -> git config --global user.name "Your name"
+        -> git config --global user.email "your.email@example.com"
 
 or at the local level yopu just have to remove the --global from the command and it set your name and email to that particular repository in which you're working 
-
-->git config user.name "Your name"
--> git config user.email "your.email@example.com"
+        ->git config user.name "Your name"
+        -> git config user.email "your.email@example.com"
 
 to check the configuration settings applied just to the repository 
--> git config --local --list 
+        -> git config --local --list 
 
 then initialize your project repository 
--> git init 
+        -> git init 
 
 for creating or modify your files 
--> touch your_filename 
+        -> touch your_filename 
 
 for checking the status 
--> git status (it tells about the untracked and tracked file)
+        -> git status (it tells about the untracked and tracked file)
 
 to move the files from the modified area to the staging area 
--> git add your_filename      (this si used to a particular file to the repository)
-        OR
--> git add .    (this is used to add all files in the repository)
+        -> git add your_filename      (this si used to a particular file to the repository)
+                        OR
+        -> git add .    (this is used to add all files in the repository)
 and after that we can check the status of the repository file 
 
 for commiting the staged changes to the local repository history 
--> git commit -m "A meaningful message to be written here"
+        -> git commit -m "A meaningful message to be written here"
 
 after commit we can check the or view the history by 
--> git log 
+        -> git log 
 
 for connecting on github some few steps are as follows:-
 1-> create a new or empty repository on github 
 
 2-> then link your local repository to the remote on the github 
--> git remote add origin <url> 
+        -> git remote add origin <url> 
 
 3-> Pushes your local comit to the main branch 
--> git push -u origin main (or master)
+        -> git push -u origin main (or master)
 
 if it is not working then craete a branch 
--> git branch (here we can chcek the branch as what are the branches are available in our repository)
+        -> git branch (here we can chcek the branch as what are the branches are available in our repository)
 
 or create by like 
--> git branch main (main main is created by default in our repo) [then repeate the 3 step ]
+        -> git branch main (main main is created by default in our repo) [then repeate the 3 step ]
 
 4-> Pull and integrates changes to the remote repo to the local repo or get the updates
--> git pull origin main
+        -> git pull origin main
 
 ====================================================================================================
 
@@ -56,17 +55,17 @@ if in the url there are already file exists then few steps we have to follow lik
 STEP 1-> Pull the remote changes 
 
 1-> Pull and rebase (this means that it downloads the remote history and places your local commits on top of the remote history for getting teh cleaner result 
--> git pull origin main --rebase
+        -> git pull origin main --rebase
 
 --> if you want to merge commits then do 
--> git pull origin main 
+        -> git pull origin main 
 
 then wait for the status and observe the terminal and check if you want to merge it or it shows some error then resolve it manually 
 
 
 STEP 2-> Push your local changes
 Now that your local branch is up-to-dated then you can easily push your code to the remote repository safely
--> git push origin main
+        -> git push origin main
 
 ======================================================================================================
 
@@ -75,21 +74,21 @@ Branching and Merging (Collaboration)
 it allows multiple people(or features) work in parallel
 
 1-> create a branch 
--> git branch new-feature
+        -> git branch new-feature
 
 2-> Switch to the branch 
--> git checkout new-feature
+        -> git checkout new-feature
 
 3->In one step to create a branch and immediately switch to that particula branch 
--> git checkout -b bug-fix
+        -> git checkout -b bug-fix
 
 4-> if you want to work on that particular branch and commit and same steps have to be follow to work on it 
 
 5-> Switch back to the previous or some other branch 
--> git checkout main 
+        -> git checkout main 
 
 5-> Merge changes 
--> git merge new-feature   [it integrates the commit changes from new-feature to the current main feature 
+        -> git merge new-feature   [it integrates the commit changes from new-feature to the current main feature 
 
 ====================================================================================================
 
